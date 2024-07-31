@@ -1,6 +1,15 @@
+
 const Dashboard = () =>{
     return(
-        <div>dash</div>
+        <div className="dashboard">
+
+            <chatContainer/>
+            <div className="swiper-container">
+                <div className="card-container">
+
+                </div>
+            </div>
+        </div>
     )
 }
 
