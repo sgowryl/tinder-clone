@@ -13,14 +13,14 @@ const Home = () =>{
     return(
         
         <div className='overlay'>
-        <Nav minimal={false} authToken={authToken}/>
-        <div className="home">
-            <h1>Swipe Right</h1>
-            <button className="primary-button" onClick={handleClick}>
-                {authToken?'Signout':'Create Account'}
-            </button>
-            {showModal &&(<AuthModal setShowModal={setShowModal}/>)}
-        </div>
+            <Nav minimal={false} authToken={authToken} setShowModal={setShowModal} showModal={showModal}/>
+            <div className="home">
+                <h1>Swipe Right</h1>
+                <button className="primary-button" onClick={handleClick}>
+                    {authToken?'Signout':'Create Account'}
+                </button>
+                {showModal &&(<AuthModal setShowModal={setShowModal}/>)}
+            </div>
         </div>
     )
 }
